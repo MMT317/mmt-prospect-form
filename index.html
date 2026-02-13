@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MMT Financial &amp; Insurance — Warm Market Prospect Form</title>
+<style>
+  :root {
+    --navy: #1a2a4a;
+    --gold: #c5a44e;
+    --gold-light: #e8d9a0;
+    --light-bg: #f7f5ef;
+    --white: #ffffff;
+    --gray: #6b7280;
+    --gray-light: #e5e7eb;
+    --red: #b91c1c;
+    --green: #166534;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--light-bg);
+    color: #1f2937;
+    line-height: 1.5;
+    padding: 0;
+  }
+
+  .page-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, var(--navy) 0%, #243b6a 100%);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo-container img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+  }
+  .logo-placeholder {
+    width: 70px; height: 70px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); font-weight: 700; font-size: 14px;
+    text-align: center; line-height: 1.1;
+    flex-shrink: 0;
+  }
+  .header-text {
+    flex: 1;
+  }
+  .header-text h1 {
+    color: var(--gold);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+  .header-text h2 {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    opacity: 0.92;
+  }
+
+  /* CONFIDENTIALITY BANNER */
+  .confidential-banner {
+    background: #fef3c7;
+    border-left: 4px solid var(--gold);
+    padding: 14px 24px;
+    margin: 20px 24px 0;
+    border-radius: 4px;
+    font-size: 13.5px;
+    color: #92400e;
+    line-height: 1.55;
+  }
+  .confidential-banner strong { color: var(--red); }
+  .lock-icon { font-size: 15px; margin-right: 4px; }
+
+  /* FORM */
+  .form-body { padding: 24px 32px 32px; }
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 6px;
+    margin: 28px 0 16px;
+  }
+  .section-title:first-child { margin-top: 0; }
+
+  .row { display: flex; gap: 16px; margin-bottom: 14px; flex-wrap: wrap; }
+  .field { flex: 1; min-width: 200px; }
+  .field.full { flex-basis: 100%; }
+
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  label .req { color: var(--red); margin-left: 2px; }
+
+  input[type="text"], input[type="email"], input[type="tel"], input[type="date"],
+  select, textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid var(--gray-light);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    background: var(--white);
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(197,164,78,0.15);
+  }
+  textarea { resize: vertical; min-height: 70px; }
+
+  /* PROSPECT CARD */
+  .prospect-card {
+    background: var(--light-bg);
+    border: 1.5px solid var(--gray-light);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .prospect-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .prospect-card .card-number {
+    background: var(--navy);
+    color: var(--gold);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .remove-btn {
+    background: none;
+    border: 1.5px solid var(--red);
+    color: var(--red);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .remove-btn:hover { background: var(--red); color: var(--white); }
+
+  .checkbox-group { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; padding-top: 4px; }
+  .checkbox-group label { font-weight: 400; display: flex; align-items: center; gap: 6px; cursor: pointer; }
+  .checkbox-group input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--navy); }
+
+  /* ADD BUTTON */
+  .add-prospect-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    border: 2px dashed var(--gold);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  .add-prospect-btn:hover { background: rgba(197,164,78,0.08); }
+
+  /* SIGNATURE */
+  .sig-section { margin-top: 28px; }
+  .sig-canvas-wrap {
+    border: 1.5px solid var(--gray-light);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    background: #fafafa;
+  }
+  #sigCanvas { display: block; width: 100%; height: 120px; cursor: crosshair; touch-action: none; }
+  .sig-actions { display: flex; gap: 10px; margin-top: 8px; }
+
+  /* BUTTONS */
+  .btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s, transform 0.1s;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-sm { padding: 7px 14px; font-size: 13px; }
+  .btn-outline { background: transparent; border: 1.5px solid var(--navy); color: var(--navy); }
+  .btn-outline:hover { background: var(--navy); color: var(--white); }
+  .btn-gold { background: var(--gold); color: var(--white); }
+  .btn-gold:hover { opacity: 0.9; }
+  .btn-navy { background: var(--navy); color: var(--white); }
+  .btn-navy:hover { opacity: 0.9; }
+  .btn-red { background: var(--red); color: var(--white); }
+  .btn-red:hover { opacity: 0.9; }
+  .btn-green { background: var(--green); color: var(--white); }
+  .btn-green:hover { opacity: 0.9; }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .action-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 2px solid var(--gray-light);
+    justify-content: center;
+  }
+
+  /* LOCK OVERLAY */
+  .locked-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(22,101,52,0.92);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    z-index: 1000;
+    letter-spacing: 0.5px;
+  }
+  .locked-overlay.show { display: block; }
+
+  /* STATUS MESSAGE */
+  .status-msg {
+    text-align: center;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    display: none;
+  }
+  .status-msg.success { display: block; background: #dcfce7; color: var(--green); border: 1px solid #86efac; }
+  .status-msg.error { display: block; background: #fee2e2; color: var(--red); border: 1px solid #fca5a5; }
+
+  /* FOOTER */
+  .form-footer {
+    text-align: center;
+    padding: 18px 24px;
+    background: var(--navy);
+    color: rgba(255,255,255,0.65);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .form-footer a { color: var(--gold); text-decoration: none; }
+
+  /* SMS CONFIG PANEL (hidden by default) */
+  .sms-config {
+    display: none;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-top: 12px;
+    font-size: 13px;
+  }
+  .sms-config.show { display: block; }
+  .sms-config input { max-width: 300px; }
+
+  /* PRINT */
+  @media print {
+    body { background: #fff; }
+    .page-wrapper { box-shadow: none; }
+    .action-bar, .add-prospect-btn, .remove-btn, .sig-actions, .sms-config { display: none !important; }
+    .locked-overlay { display: none !important; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .header { padding: 20px 16px; flex-direction: column; text-align: center; }
+    .logo-container { justify-content: center; }
+    .form-body { padding: 16px; }
+    .row { flex-direction: column; gap: 10px; }
+    .field { min-width: 100%; }
+    .action-bar { flex-direction: column; }
+    .action-bar .btn { width: 100%; justify-content: center; }
+    .header-text h1 { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="locked-overlay" id="lockedBanner">FORM LOCKED — Signed &amp; Submitted</div>
+
+<div class="page-wrapper" id="formPage">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-container">
+      <img id="logo1" src="https://img1.wsimg.com/isteam/ip/3cfcbb32-8394-4f62-ab6a-9ba269b320bd/blob-407faa5.png/:/rs=h:200,cg:true,m/qt=q:95" alt="MMT Financial & Insurance" onerror="this.style.display='none'; document.getElementById('logoFallback1').style.display='flex';">
+      <div id="logoFallback1" class="logo-placeholder" style="display:none;">MMT<br>Logo</div>
+      <img id="logo2" src="https://img1.wsimg.com/isteam/ip/3cfcbb32-8394-4f62-ab6a-9ba269b320bd/FEG%20Logo%20Family-17a96ad.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" alt="Freedom Equity Group" onerror="this.style.display='none'; document.getElementById('logoFallback2').style.display='flex';">
+      <div id="logoFallback2" class="logo-placeholder" style="display:none;">FEG<br>Logo</div>
+    </div>
+    <div class="header-text">
+      <h1>MMT FINANCIAL &amp; INSURANCE</h1>
+      <h2>Warm Market Prospect Intake Form</h2>
+    </div>
+  </div>
+
+  <!-- CONFIDENTIALITY -->
+  <div class="confidential-banner">
+    <span class="lock-icon">&#128274;</span>
+    <strong>CONFIDENTIAL:</strong> All prospect information submitted through this form is strictly confidential.
+    MMT Financial &amp; Insurance will <strong>never</strong> contact your prospects without your expressed authorization.
+    Your trust is the foundation of our partnership.
+  </div>
+
+  <!-- FORM -->
+  <form id="prospectForm" class="form-body" onsubmit="return false;">
+
+    <!-- TEAM MEMBER INFO -->
+    <div class="section-title">Team Member Information</div>
+    <div class="row">
+      <div class="field">
+        <label>Date<span class="req">*</span></label>
+        <input type="date" id="formDate" required>
+      </div>
+      <div class="field">
+        <label>Team Member Name<span class="req">*</span></label>
+        <input type="text" id="teamMemberName" placeholder="Your full name" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Team Member Email<span class="req">*</span></label>
+        <input type="email" id="teamMemberEmail" placeholder="your@email.com" required>
+      </div>
+      <div class="field">
+        <label>Team Member Phone</label>
+        <input type="tel" id="teamMemberPhone" placeholder="(555) 123-4567">
+      </div>
+    </div>
+
+    <!-- PROSPECTS -->
+    <div class="section-title">Prospect Details</div>
+    <div id="prospectsContainer">
+      <!-- Prospect cards inserted here -->
+    </div>
+    <button type="button" class="add-prospect-btn" id="addProspectBtn" onclick="addProspect()">
+      &#43; Add Another Prospect
+    </button>
+
+    <!-- SIGNATURE -->
+    <div class="section-title sig-section">Signature &amp; Acknowledgment</div>
+    <p style="font-size:13.5px; color:#4b5563; margin-bottom: 10px;">
+      By signing below, I confirm that the information provided is accurate and I authorize MMT Financial &amp; Insurance to review these prospects with me in a confidential manner.
+    </p>
+    <div class="sig-canvas-wrap">
+      <canvas id="sigCanvas"></canvas>
+    </div>
+    <div class="sig-actions">
+      <button type="button" class="btn btn-sm btn-outline" onclick="clearSignature()">Clear Signature</button>
+    </div>
+
+    <!-- SMS CONSENT -->
+    <div class="section-title">SMS Notification Consent (Optional)</div>
+    <div style="background: #f0f9ff; border: 1.5px solid #bae6fd; border-radius: 8px; padding: 16px; margin-bottom: 8px;">
+      <label style="display: flex; align-items: flex-start; gap: 10px; font-weight: 400; cursor: pointer; margin-bottom: 0;">
+        <input type="checkbox" id="smsConsent" style="width: 20px; height: 20px; margin-top: 2px; accent-color: #1a2a4a; flex-shrink: 0;">
+        <span style="font-size: 13.5px; line-height: 1.55;">
+          I consent to receive SMS notifications from MMT Financial &amp; Insurance regarding this form submission.
+          Message and data rates may apply. Message frequency varies. Reply <strong>STOP</strong> to unsubscribe.
+          Reply <strong>HELP</strong> for support. View our
+          <a href="privacy-policy.html" target="_blank" style="color: #1a2a4a; text-decoration: underline;">Privacy Policy &amp; Terms</a>.
+        </span>
+      </label>
+      <div id="smsPhoneNote" style="display: none; margin-top: 10px; padding-top: 10px; border-top: 1px solid #bae6fd;">
+        <label style="font-size: 13px;">Mobile Number for SMS Notifications</label>
+        <input type="tel" id="smsPhone" placeholder="(555) 123-4567" style="max-width: 280px;">
+        <p style="font-size: 12px; color: #6b7280; margin-top: 4px;">Enter your mobile number if different from the phone number above. This number will receive a confirmation text when your form is submitted.</p>
+      </div>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="action-bar">
+      <button type="button" class="btn btn-gold" onclick="lockForm()">&#128274; Sign &amp; Lock Form</button>
+      <button type="button" class="btn btn-navy" onclick="emailForm()">&#9993; Email to Marc &amp; Marylene</button>
+      <button type="button" class="btn btn-green" onclick="saveForm()">&#128190; Save Locally</button>
+      <button type="button" class="btn btn-sm btn-outline" onclick="unlockForm()" id="unlockBtn" style="display:none;">&#128275; Unlock to Edit</button>
+    </div>
+
+    <div class="status-msg" id="statusMsg"></div>
+
+  </form>
+
+  <!-- FOOTER -->
+  <div class="form-footer">
+    &copy; 2026 MMT Financial &amp; Insurance. All rights reserved.<br>
+    <a href="mailto:marc@mmtfininsurance.com">marc@mmtfininsurance.com</a> &nbsp;|&nbsp;
+    <a href="mailto:marylene@mmtfininsurance.com">marylene@mmtfininsurance.com</a>
+  </div>
+
+</div>
+
+<script>
+// ===================== CONFIG =====================
+const CONFIG = {
+  emailTo: 'marc@mmtfininsurance.com',
+  emailCc: 'marylene@mmtfininsurance.com',
+  twilio: {
+    // ══════════════════════════════════════════════════════════
+    // STEP 1: Get your Twilio campaign approved
+    // STEP 2: Deploy the serverless function (see guide)
+    // STEP 3: Set enabled to true and fill in the values below
+    // ══════════════════════════════════════════════════════════
+    enabled: false,   // Change to true once campaign is approved
+    serverEndpoint: 'https://your-site.netlify.app/.netlify/functions/send-sms',  // Your deployed function URL
+    toNumbers: [
+      // '+15551234567',  // Marc's mobile
+      // '+15559876543',  // Marylene's mobile
+    ]
+  }
+};
+
+// ===================== STATE =====================
+let prospectCount = 0;
+let isLocked = false;
+let signatureData = null;
+
+// ===================== INIT =====================
+document.addEventListener('DOMContentLoaded', () => {
+  // Set today's date
+  const today = new Date();
+  const dateStr = today.toISOString().split('T')[0];
+  document.getElementById('formDate').value = dateStr;
+
+  // Init signature canvas
+  initSignature();
+
+  // Add first prospect card
+  addProspect();
+
+  // SMS consent toggle
+  document.getElementById('smsConsent').addEventListener('change', function() {
+    document.getElementById('smsPhoneNote').style.display = this.checked ? 'block' : 'none';
+  });
+});
+
+// ===================== PROSPECT CARDS =====================
+function addProspect() {
+  if (isLocked) return;
+  prospectCount++;
+  const n = prospectCount;
+  const container = document.getElementById('prospectsContainer');
+
+  const card = document.createElement('div');
+  card.className = 'prospect-card';
+  card.id = `prospect-${n}`;
+  card.innerHTML = `
+    <div class="card-header">
+      <span class="card-number">Prospect #${n}</span>
+      ${n > 1 ? `<button type="button" class="remove-btn" onclick="removeProspect(${n})">Remove</button>` : ''}
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Prospect Full Name<span class="req">*</span></label>
+        <input type="text" name="pName_${n}" placeholder="First and Last Name" required>
+      </div>
+      <div class="field">
+        <label>Location (City, State)</label>
+        <input type="text" name="pLocation_${n}" placeholder="e.g. Atlanta, GA">
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Prospect Phone</label>
+        <input type="tel" name="pPhone_${n}" placeholder="(555) 123-4567">
+      </div>
+      <div class="field">
+        <label>Prospect Email</label>
+        <input type="email" name="pEmail_${n}" placeholder="prospect@email.com">
+      </div>
+    </div>
+    <div class="row">
+      <div class="field full">
+        <label>Interest Area<span class="req">*</span></label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="pProduct_${n}" value="Product"> Product(s) — Family Financial Protection</label>
+          <label><input type="checkbox" name="pBusiness_${n}" value="Business"> Potential Business Partner</label>
+          <label><input type="checkbox" name="pBoth_${n}" value="Both"> Both Product(s) &amp; Business Partner</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Current Job / Occupation</label>
+        <input type="text" name="pJob_${n}" placeholder="e.g. Teacher, Nurse, Entrepreneur">
+      </div>
+      <div class="field">
+        <label>Referred By<span class="req">*</span></label>
+        <select name="pReferral_${n}" required>
+          <option value="">— Select —</option>
+          <option value="self">Myself (Team Member)</option>
+          <option value="other">Someone Else</option>
+        </select>
+      </div>
+    </div>
+    <div class="row" id="referrerRow_${n}" style="display:none;">
+      <div class="field full">
+        <label>Referrer's Name</label>
+        <input type="text" name="pReferrer_${n}" placeholder="Name of person who referred this prospect">
+      </div>
+    </div>
+    <div class="row">
+      <div class="field full">
+        <label>Notes / Comments<span class="req">*</span></label>
+        <textarea name="pNotes_${n}" placeholder="Why do you believe this person has potential for our products or as a business partner? Include any relevant details..." required></textarea>
+      </div>
+    </div>
+  `;
+  container.appendChild(card);
+
+  // Show/hide referrer name field
+  const refSelect = card.querySelector(`[name="pReferral_${n}"]`);
+  refSelect.addEventListener('change', () => {
+    document.getElementById(`referrerRow_${n}`).style.display = refSelect.value === 'other' ? 'flex' : 'none';
+  });
+
+  // Renumber all cards
+  renumberCards();
+}
+
+function removeProspect(n) {
+  if (isLocked) return;
+  const card = document.getElementById(`prospect-${n}`);
+  if (card) card.remove();
+  renumberCards();
+}
+
+function renumberCards() {
+  const cards = document.querySelectorAll('.prospect-card');
+  cards.forEach((card, idx) => {
+    card.querySelector('.card-number').textContent = `Prospect #${idx + 1}`;
+  });
+}
+
+// ===================== SIGNATURE PAD =====================
+let sigCanvas, sigCtx, sigDrawing = false;
+
+function initSignature() {
+  sigCanvas = document.getElementById('sigCanvas');
+  sigCtx = sigCanvas.getContext('2d');
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  // Mouse events
+  sigCanvas.addEventListener('mousedown', sigStart);
+  sigCanvas.addEventListener('mousemove', sigDraw);
+  sigCanvas.addEventListener('mouseup', sigEnd);
+  sigCanvas.addEventListener('mouseleave', sigEnd);
+
+  // Touch events
+  sigCanvas.addEventListener('touchstart', e => { e.preventDefault(); sigStart(getTouchPos(e)); });
+  sigCanvas.addEventListener('touchmove', e => { e.preventDefault(); sigDraw(getTouchPos(e)); });
+  sigCanvas.addEventListener('touchend', sigEnd);
+}
+
+function resizeCanvas() {
+  const rect = sigCanvas.parentElement.getBoundingClientRect();
+  sigCanvas.width = rect.width;
+  sigCanvas.height = 120;
+  sigCtx.strokeStyle = '#1a2a4a';
+  sigCtx.lineWidth = 2;
+  sigCtx.lineCap = 'round';
+  sigCtx.lineJoin = 'round';
+}
+
+function getTouchPos(e) {
+  const rect = sigCanvas.getBoundingClientRect();
+  const touch = e.touches[0];
+  return { offsetX: touch.clientX - rect.left, offsetY: touch.clientY - rect.top };
+}
+
+function sigStart(e) {
+  if (isLocked) return;
+  sigDrawing = true;
+  sigCtx.beginPath();
+  sigCtx.moveTo(e.offsetX, e.offsetY);
+}
+
+function sigDraw(e) {
+  if (!sigDrawing || isLocked) return;
+  sigCtx.lineTo(e.offsetX, e.offsetY);
+  sigCtx.stroke();
+}
+
+function sigEnd() {
+  sigDrawing = false;
+  signatureData = sigCanvas.toDataURL();
+}
+
+function clearSignature() {
+  if (isLocked) return;
+  sigCtx.clearRect(0, 0, sigCanvas.width, sigCanvas.height);
+  signatureData = null;
+}
+
+// ===================== VALIDATION =====================
+function validateForm() {
+  const name = document.getElementById('teamMemberName').value.trim();
+  const email = document.getElementById('teamMemberEmail').value.trim();
+  if (!name || !email) {
+    showStatus('Please fill in your name and email.', 'error');
+    return false;
+  }
+
+  const cards = document.querySelectorAll('.prospect-card');
+  for (const card of cards) {
+    const pName = card.querySelector('input[name^="pName"]');
+    const pNotes = card.querySelector('textarea[name^="pNotes"]');
+    if (!pName.value.trim()) {
+      showStatus('Please enter a name for each prospect.', 'error');
+      pName.focus();
+      return false;
+    }
+    if (!pNotes.value.trim()) {
+      showStatus('Please add notes for each prospect.', 'error');
+      pNotes.focus();
+      return false;
+    }
+  }
+
+  if (!signatureData) {
+    showStatus('Please provide your signature before proceeding.', 'error');
+    return false;
+  }
+
+  return true;
+}
+
+// ===================== LOCK / UNLOCK =====================
+function lockForm() {
+  if (!validateForm()) return;
+
+  isLocked = true;
+  const inputs = document.querySelectorAll('#prospectForm input, #prospectForm select, #prospectForm textarea');
+  inputs.forEach(el => el.setAttribute('disabled', 'true'));
+
+  document.getElementById('addProspectBtn').style.display = 'none';
+  document.querySelectorAll('.remove-btn').forEach(b => b.style.display = 'none');
+  document.getElementById('lockedBanner').classList.add('show');
+  document.getElementById('unlockBtn').style.display = 'inline-flex';
+
+  showStatus('Form locked successfully. You can now email or save it.', 'success');
+}
+
+function unlockForm() {
+  isLocked = false;
+  const inputs = document.querySelectorAll('#prospectForm input, #prospectForm select, #prospectForm textarea');
+  inputs.forEach(el => el.removeAttribute('disabled'));
+
+  document.getElementById('addProspectBtn').style.display = 'flex';
+  document.querySelectorAll('.remove-btn').forEach(b => b.style.display = 'inline');
+  document.getElementById('lockedBanner').classList.remove('show');
+  document.getElementById('unlockBtn').style.display = 'none';
+
+  hideStatus();
+}
+
+// ===================== BUILD EMAIL BODY =====================
+function buildEmailContent() {
+  const teamName = document.getElementById('teamMemberName').value.trim();
+  const teamEmail = document.getElementById('teamMemberEmail').value.trim();
+  const teamPhone = document.getElementById('teamMemberPhone').value.trim();
+  const date = document.getElementById('formDate').value;
+
+  let body = `WARM MARKET PROSPECT FORM SUBMISSION\n`;
+  body += `${'='.repeat(45)}\n\n`;
+  body += `Date: ${date}\n`;
+  body += `Team Member: ${teamName}\n`;
+  body += `Email: ${teamEmail}\n`;
+  if (teamPhone) body += `Phone: ${teamPhone}\n`;
+  body += `\n${'—'.repeat(45)}\n`;
+
+  const cards = document.querySelectorAll('.prospect-card');
+  cards.forEach((card, idx) => {
+    body += `\nPROSPECT #${idx + 1}\n`;
+    body += `${'—'.repeat(25)}\n`;
+
+    const pName = card.querySelector('input[name^="pName"]').value;
+    const pLocation = card.querySelector('input[name^="pLocation"]').value;
+    const pPhone = card.querySelector('input[name^="pPhone"]').value;
+    const pEmail = card.querySelector('input[name^="pEmail"]').value;
+    const pJob = card.querySelector('input[name^="pJob"]').value;
+    const pNotes = card.querySelector('textarea[name^="pNotes"]').value;
+    const pRef = card.querySelector('select[name^="pReferral"]').value;
+    const pReferrer = card.querySelector('input[name^="pReferrer"]')?.value || '';
+
+    // Interest checkboxes
+    const interests = [];
+    if (card.querySelector('input[name^="pProduct"]')?.checked) interests.push('Product(s)');
+    if (card.querySelector('input[name^="pBusiness"]')?.checked) interests.push('Business Partner');
+    if (card.querySelector('input[name^="pBoth"]')?.checked) interests.push('Both Product(s) & Business Partner');
+
+    body += `Name: ${pName}\n`;
+    if (pLocation) body += `Location: ${pLocation}\n`;
+    if (pPhone) body += `Phone: ${pPhone}\n`;
+    if (pEmail) body += `Email: ${pEmail}\n`;
+    if (interests.length) body += `Interest: ${interests.join(', ')}\n`;
+    if (pJob) body += `Occupation: ${pJob}\n`;
+    body += `Referred By: ${pRef === 'self' ? teamName + ' (Team Member)' : pReferrer || 'Other'}\n`;
+    body += `Notes: ${pNotes}\n`;
+  });
+
+  body += `\n${'='.repeat(45)}\n\n`;
+  body += `${teamName} looks forward to reviewing these prospects with you at your earliest convenience so that we can work together to attract these contacts to our MMT FEG PRODUCT and/or BUSINESS PRESENTATIONS so that they can learn about this exciting BUSINESS OPPORTUNITY AND CRUCIAL FAMILY FINANCIAL PROTECTION and TAX-FREE RETIREMENT STRATEGY.\n\n`;
+  body += `CONFIDENTIAL: All prospect information is strictly confidential. MMT Financial & Insurance will never contact these prospects without the expressed authorization of the submitting team member.\n\n`;
+  body += `— Submitted via MMT Warm Market Prospect Form`;
+
+  return { subject: `Warm Market Prospects — ${teamName} — ${date}`, body };
+}
+
+// ===================== EMAIL =====================
+function emailForm() {
+  if (!validateForm()) return;
+
+  const { subject, body } = buildEmailContent();
+  const mailto = `mailto:${CONFIG.emailTo}?cc=${CONFIG.emailCc}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailto;
+
+  // Attempt SMS notification (placeholder)
+  if (CONFIG.twilio.enabled) {
+    sendSmsNotification();
+  }
+
+  showStatus('Email client opened. Please send the email from your mail app.', 'success');
+}
+
+// ===================== TWILIO SMS INTEGRATION =====================
+// HOW TO ACTIVATE:
+// 1. Get your Twilio campaign approved (see Twilio_CTA_Resubmission_Guide.md)
+// 2. Deploy the serverless function (see instructions below)
+// 3. Set CONFIG.twilio.enabled = true
+// 4. Set CONFIG.twilio.serverEndpoint to your deployed function URL
+//
+// SERVERLESS FUNCTION: Deploy this on Netlify Functions, Vercel, or Cloudflare Workers.
+// It keeps your Twilio credentials secure on the server side.
+// See: https://www.twilio.com/docs/messaging/quickstart
+//
+// --- Example Netlify Function (netlify/functions/send-sms.js): ---
+// const twilio = require('twilio');
+// exports.handler = async (event) => {
+//   if (event.httpMethod !== 'POST') return { statusCode: 405, body: 'Method Not Allowed' };
+//   const { messages } = JSON.parse(event.body);
+//   const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+//   const results = [];
+//   for (const msg of messages) {
+//     const result = await client.messages.create({
+//       body: msg.body,
+//       from: process.env.TWILIO_PHONE_NUMBER,
+//       to: msg.to
+//     });
+//     results.push(result.sid);
+//   }
+//   return { statusCode: 200, body: JSON.stringify({ success: true, sids: results }) };
+// };
+// --- Set env vars: TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_PHONE_NUMBER ---
+
+async function sendSmsNotification() {
+  if (!CONFIG.twilio.enabled) {
+    console.log('[SMS] Twilio not yet enabled. Set CONFIG.twilio.enabled = true after campaign approval.');
+    return;
+  }
+
+  const smsConsent = document.getElementById('smsConsent').checked;
+  const teamName = document.getElementById('teamMemberName').value.trim();
+  const prospectCards = document.querySelectorAll('.prospect-card');
+  const prospectCount = prospectCards.length;
+  const date = document.getElementById('formDate').value;
+
+  const messages = [];
+
+  // Message to Marc & Marylene
+  const leaderMsg = `MMT Financial & Insurance: ${teamName} just submitted a Warm Market Prospect Form with ${prospectCount} prospect(s) on ${date}. Check your email for details. Reply STOP to opt out. Reply HELP for support.`;
+
+  CONFIG.twilio.toNumbers.forEach(num => {
+    messages.push({ to: num, body: leaderMsg });
+  });
+
+  // Confirmation to team member (if they opted in)
+  if (smsConsent) {
+    const smsPhone = document.getElementById('smsPhone').value.trim() || document.getElementById('teamMemberPhone').value.trim();
+    if (smsPhone) {
+      const confirmMsg = `MMT Financial & Insurance: Thank you for submitting your prospect form, ${teamName}! Marc & Marylene will review it shortly. Reply STOP to opt out, HELP for support.`;
+      messages.push({ to: smsPhone, body: confirmMsg });
+    }
+  }
+
+  if (messages.length === 0) return;
+
+  try {
+    const response = await fetch(CONFIG.twilio.serverEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages })
+    });
+    const data = await response.json();
+    if (data.success) {
+      console.log('[SMS] Notifications sent:', data.sids);
+    } else {
+      console.error('[SMS] Server returned error:', data);
+    }
+  } catch (err) {
+    console.error('[SMS] Failed to send notifications:', err);
+    // Don't block the email flow — SMS is supplementary
+  }
+}
+
+// ===================== SAVE LOCALLY =====================
+function saveForm() {
+  if (!validateForm()) return;
+
+  const teamName = document.getElementById('teamMemberName').value.trim().replace(/\s+/g, '_');
+  const date = document.getElementById('formDate').value;
+
+  // Clone the page for saving
+  const clone = document.getElementById('formPage').cloneNode(true);
+
+  // Remove action buttons and add-prospect button from saved version
+  const actionBar = clone.querySelector('.action-bar');
+  if (actionBar) actionBar.remove();
+  const addBtn = clone.querySelector('.add-prospect-btn');
+  if (addBtn) addBtn.remove();
+  clone.querySelectorAll('.remove-btn').forEach(b => b.remove());
+  clone.querySelectorAll('.sig-actions').forEach(b => b.remove());
+
+  // Replace canvas with signature image
+  const canvas = clone.querySelector('#sigCanvas');
+  if (canvas && signatureData) {
+    const img = document.createElement('img');
+    img.src = signatureData;
+    img.style.width = '100%';
+    img.style.height = '120px';
+    img.style.objectFit = 'contain';
+    canvas.parentElement.replaceChild(img, canvas);
+  }
+
+  // Capture form values into the clone
+  const origInputs = document.querySelectorAll('#prospectForm input, #prospectForm select, #prospectForm textarea');
+  const cloneInputs = clone.querySelectorAll('input, select, textarea');
+  cloneInputs.forEach((el, i) => {
+    const orig = origInputs[i];
+    if (!orig) return;
+    if (orig.type === 'checkbox') {
+      if (orig.checked) el.setAttribute('checked', 'checked');
+    } else if (orig.tagName === 'SELECT') {
+      el.querySelectorAll('option').forEach(opt => {
+        opt.selected = opt.value === orig.value;
+        if (opt.value === orig.value) opt.setAttribute('selected', 'selected');
+      });
+    } else {
+      el.setAttribute('value', orig.value);
+      if (orig.tagName === 'TEXTAREA') el.textContent = orig.value;
+    }
+    el.setAttribute('disabled', 'true');
+  });
+
+  // Add "SUBMITTED" watermark
+  const stamp = document.createElement('div');
+  stamp.style.cssText = 'text-align:center; padding:14px; background:#dcfce7; color:#166534; font-weight:700; font-size:14px; margin-top:16px; border-radius:6px;';
+  stamp.textContent = 'FORM SUBMITTED — ' + new Date().toLocaleString();
+  const formBody = clone.querySelector('.form-body');
+  if (formBody) formBody.appendChild(stamp);
+
+  const fullHtml = `<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>MMT Prospect Form — ${teamName}</title><style>${document.querySelector('style').textContent}</style></head><body>${clone.outerHTML}</body></html>`;
+
+  const blob = new Blob([fullHtml], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `MMT_Prospects_${teamName}_${date}.html`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  showStatus('Form saved! Check your Downloads folder.', 'success');
+}
+
+// ===================== STATUS =====================
+function showStatus(msg, type) {
+  const el = document.getElementById('statusMsg');
+  el.textContent = msg;
+  el.className = `status-msg ${type}`;
+  setTimeout(() => { el.className = 'status-msg'; }, 6000);
+}
+function hideStatus() {
+  document.getElementById('statusMsg').className = 'status-msg';
+}
+</script>
+
+</body>
+</html>
