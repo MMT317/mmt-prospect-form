@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MMT Financial &amp; Insurance — Warm Market Prospect Form</title>
+<title>MMT Financial and Insurance — Warm Market Prospect Form</title>
 <style>
   :root {
     --navy: #1a2a4a;
@@ -337,7 +337,7 @@
   <!-- HEADER -->
   <div class="header">
     <div class="logo-container">
-      <img id="logo1" src="https://img1.wsimg.com/isteam/ip/3cfcbb32-8394-4f62-ab6a-9ba269b320bd/blob-407faa5.png/:/rs=h:200,cg:true,m/qt=q:95" alt="MMT Financial & Insurance" onerror="this.style.display='none'; document.getElementById('logoFallback1').style.display='flex';">
+      <img id="logo1" src="https://img1.wsimg.com/isteam/ip/3cfcbb32-8394-4f62-ab6a-9ba269b320bd/blob-407faa5.png/:/rs=h:200,cg:true,m/qt=q:95" alt="MMT Financial and Insurance" onerror="this.style.display='none'; document.getElementById('logoFallback1').style.display='flex';">
       <div id="logoFallback1" class="logo-placeholder" style="display:none;">MMT<br>Logo</div>
       <img id="logo2" src="https://img1.wsimg.com/isteam/ip/3cfcbb32-8394-4f62-ab6a-9ba269b320bd/FEG%20Logo%20Family-17a96ad.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" alt="Freedom Equity Group" onerror="this.style.display='none'; document.getElementById('logoFallback2').style.display='flex';">
       <div id="logoFallback2" class="logo-placeholder" style="display:none;">FEG<br>Logo</div>
@@ -352,7 +352,7 @@
   <div class="confidential-banner">
     <span class="lock-icon">&#128274;</span>
     <strong>CONFIDENTIAL:</strong> All prospect information submitted through this form is strictly confidential.
-    MMT Financial &amp; Insurance will <strong>never</strong> contact your prospects without your expressed authorization.
+    MMT Financial and Insurance will <strong>never</strong> contact your prospects without your expressed authorization.
     Your trust is the foundation of our partnership.
   </div>
 
@@ -394,7 +394,7 @@
     <!-- SIGNATURE -->
     <div class="section-title sig-section">Signature &amp; Acknowledgment</div>
     <p style="font-size:13.5px; color:#4b5563; margin-bottom: 10px;">
-      By signing below, I confirm that the information provided is accurate and I authorize MMT Financial &amp; Insurance to review these prospects with me in a confidential manner.
+      By signing below, I confirm that the information provided is accurate and I authorize MMT Financial and Insurance to review these prospects with me in a confidential manner.
     </p>
     <div class="sig-canvas-wrap">
       <canvas id="sigCanvas"></canvas>
@@ -409,7 +409,7 @@
       <label style="display: flex; align-items: flex-start; gap: 10px; font-weight: 400; cursor: pointer; margin-bottom: 0;">
         <input type="checkbox" id="smsConsent" style="width: 20px; height: 20px; margin-top: 2px; accent-color: #1a2a4a; flex-shrink: 0;">
         <span style="font-size: 13.5px; line-height: 1.55;">
-          I consent to receive SMS notifications from MMT Financial &amp; Insurance regarding this form submission.
+          I consent to receive SMS notifications from MMT Financial and Insurance regarding this form submission.
           Message and data rates may apply. Message frequency varies. Reply <strong>STOP</strong> to unsubscribe.
           Reply <strong>HELP</strong> for support. View our
           <a href="privacy-policy.html" target="_blank" style="color: #1a2a4a; text-decoration: underline;">Privacy Policy &amp; Terms</a>.
@@ -436,7 +436,7 @@
 
   <!-- FOOTER -->
   <div class="form-footer">
-    &copy; 2026 MMT Financial &amp; Insurance. All rights reserved.<br>
+    &copy; 2026 MMT Financial and Insurance. All rights reserved.<br>
     <a href="mailto:marc@mmtfininsurance.com">marc@mmtfininsurance.com</a> &nbsp;|&nbsp;
     <a href="mailto:marylene@mmtfininsurance.com">marylene@mmtfininsurance.com</a>
   </div>
@@ -755,7 +755,7 @@ function buildEmailContent() {
 
   body += `\n${'='.repeat(45)}\n\n`;
   body += `${teamName} looks forward to reviewing these prospects with you at your earliest convenience so that we can work together to attract these contacts to our MMT FEG PRODUCT and/or BUSINESS PRESENTATIONS so that they can learn about this exciting BUSINESS OPPORTUNITY AND CRUCIAL FAMILY FINANCIAL PROTECTION and TAX-FREE RETIREMENT STRATEGY.\n\n`;
-  body += `CONFIDENTIAL: All prospect information is strictly confidential. MMT Financial & Insurance will never contact these prospects without the expressed authorization of the submitting team member.\n\n`;
+  body += `CONFIDENTIAL: All prospect information is strictly confidential. MMT Financial and Insurance will never contact these prospects without the expressed authorization of the submitting team member.\n\n`;
   body += `— Submitted via MMT Warm Market Prospect Form`;
 
   return { subject: `Warm Market Prospects — ${teamName} — ${date}`, body };
@@ -823,7 +823,7 @@ async function sendSmsNotification() {
   const messages = [];
 
   // Message to Marc & Marylene
-  const leaderMsg = `MMT Financial & Insurance: ${teamName} just submitted a Warm Market Prospect Form with ${prospectCount} prospect(s) on ${date}. Check your email for details. Reply STOP to opt out. Reply HELP for support.`;
+  const leaderMsg = `MMT Financial and Insurance: ${teamName} just submitted a Warm Market Prospect Form with ${prospectCount} prospect(s) on ${date}. Check your email for details. Reply STOP to opt out. Reply HELP for support.`;
 
   CONFIG.twilio.toNumbers.forEach(num => {
     messages.push({ to: num, body: leaderMsg });
@@ -833,7 +833,7 @@ async function sendSmsNotification() {
   if (smsConsent) {
     const smsPhone = document.getElementById('smsPhone').value.trim() || document.getElementById('teamMemberPhone').value.trim();
     if (smsPhone) {
-      const confirmMsg = `MMT Financial & Insurance: Thank you for submitting your prospect form, ${teamName}! Marc & Marylene will review it shortly. Reply STOP to opt out, HELP for support.`;
+      const confirmMsg = `MMT Financial and Insurance: Thank you for submitting your prospect form, ${teamName}! Marc & Marylene will review it shortly. Reply STOP to opt out, HELP for support.`;
       messages.push({ to: smsPhone, body: confirmMsg });
     }
   }

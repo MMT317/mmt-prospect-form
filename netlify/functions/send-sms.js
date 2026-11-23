@@ -1,5 +1,5 @@
 // ============================================================
-// MMT Financial & Insurance — Twilio SMS Serverless Function
+// MMT Financial and Insurance — Twilio SMS Serverless Function
 // Deploy on Netlify Functions (free tier supports this)
 // ============================================================
 //
